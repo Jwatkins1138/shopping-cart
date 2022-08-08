@@ -1,9 +1,10 @@
+import { Link } from "react-router-dom";
+
 const Header = () => {
   return (
     <header>
-      <nav className="head-nav"></nav>
-      <div className="head-title"><h1>shop type shop</h1></div>
-      <nav className="head-nav"></nav>
+      <nav className="head-nav"><div className="icon"></div></nav>
+      <div className="head-title"><h1><Link to="shopping-cart/">shop type shop</Link></h1></div>
     </header>
   );
 };

@@ -2,6 +2,7 @@ html {
   background: radial-gradient(at top left, purple, blue);
   background-size: cover;
   background-attachment: fixed;
+  overflow-y: scroll;
 }
 
 body {
@@ -11,6 +12,35 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+@font-face {
+  font-family: "carbon";
+  src: url("./CarbonBlock.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  size-adjust: 130%;
+}
+
+#root {
+  /* min-height: 100%; */
+}
+
+h1 {
+  font-family: "carbon";
+}
+
+h2 {
+  font-family: "carbon";
+}
+
+h3 {
+  font-family: "carbon";
+}
+
+h4 {
+  font-family: "carbon";
 }
 
 code {
@@ -20,10 +50,258 @@ code {
 
 header {
   background: black;
-  color: lime;
-  border-bottom: 1px solid rgb(0, 0, 255, .3);
+  color: aquamarine;
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  padding-left: 5em;
+  
+}
+
+@media ( max-width: 600px ) {
+  header {
+    padding-left: none;
+  }
+}
+
+
+.sub-head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  color: white;
+  max-width: 100%;
+}
+
+.nav-tab {
+  border-right: 1px solid rgb(0, 255, 255, .3);
+  border-left: 1px solid rgb(0, 255, 255, .3);
+  padding: 1em;
+  margin-right: 1em;
+  margin-left: 1em;
+  transform: none;
+  transition: transform .2s ease-in-out;
+  cursor: pointer;
+}
+
+.nav-tab:hover {
+  background: linear-gradient(to top, rgb(0, 255, 255, .5), black);
+  transform: scale(107%);
+}
+
+li {
+  margin-left: 3em;
+}
+
+.icon {
+  height: 1.5em;
+  width: 1.5em;
+  background: url("./menu.svg");
+  background-size: cover;
+  margin-right: 5em;
+  cursor: pointer;
+  border-right: 1px solid rgb(0, 0, 0, .3);
+  border-left: 1px solid rgb(0, 0, 0, .3);
+  transform: none;
+  transition: transform .2s ease-in-out;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+
+.icon:hover {
+  border-right: 1px solid rgb(0, 255, 255, .3);
+  border-left: 1px solid rgb(0, 255, 255, .3);
+  transform: scale(107%);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.shop-title {
+  color: aqua;
+}
+
+.shop-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.side-bar {
+  width: 20vw;
+  border-top: 1px solid aqua;
+  display: flex;
+  flex-direction: column;
+}
+
+.side-title {
+  background: white;
+  padding: 1em;
+  border-bottom: 1px solid rgb(0, 0, 0, .3);
+  margin-top: 1em;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
 }
+
+.side-item {
+  padding: 1em;
+  border-bottom: 1px solid rgb(0, 255, 255, .3);
+  background: rgb(255, 255, 255, .8);
+  display: flex;
+  justify-content: space-between;
+}
+
+.shop {
+  width: 50vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  border-top: 1px solid aqua;
+}
+
+.mini-cart {
+  width: 20vw;
+  border-top: 1px solid aqua;
+}
+
+.App {
+  min-height: 100vh;
+}
+
+.home-logo {
+  margin-top: 1em;
+  height: 30em;
+  width: 30em;
+  border-top: 4px solid aqua;
+  border-bottom: 4px solid aqua;
+  padding-top: 1.5em;
+}
+
+@keyframes stripes {
+  from { transform: translateY(-50%); }
+  to {transform: translateY(50%); }
+}
+
+.home-stripe {
+  min-width: 100%;
+  min-height: 10%;
+  border-top: 1px solid aqua;
+  animation-name: stripes;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-delay: none;
+  animation-timing-function: linear;
+}
+
+.diamond {
+  /* position: absolute; */
+  transform: translateY(-100%);
+  width: 30em;
+  height: 30em;
+  background: url("./diamond.png");
+  background-size: cover;
+}
+
+.loading {
+  width: 50vw;
+  height: 30em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.active {
+  border: solid 3px purple;
+}
+
+.loading-box {
+  height: 2em;
+  width: 10em;
+  border-top: 2px solid aqua;
+  border-bottom: 2px solid aqua;
+  padding-bottom: .7em;
+}
+
+
+.loading-stripe {
+  min-width: 100%;
+  min-height: 10%;
+  border-top: .2px solid aqua;
+  animation-name: stripes;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-delay: none;
+  animation-timing-function: linear;
+}
+
+.load-title {
+  color: rgb(255, 255, 255, .9);
+  transform: translateY(-160%);
+}
+
+.info-box {
+  color: black;
+  margin: 1em;
+  padding: 1em;
+  background: rgb(255, 255, 255, .6);
+  border: 1px solid rgb(0, 255, 255, .3);
+  width: 25em;
+}
+
+.item-card {
+  color: black;
+  margin: 1em;
+  padding: .5em;
+  background: rgb(255, 255, 255, .6);
+  border: 1px solid rgb(0, 255, 255, .3);
+  width: 15em;
+  max-height: 30em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.item-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-image {
+  max-width: 100%;
+}
+
+button {
+  height: 1.5em;
+  width: 1.5em;
+  background: none;
+  border: 1px solid black;
+  padding: .5em;
+  display: flex;
+  align-items: center;
+}
+
+button.plus {
+  background: url("./plus.svg");
+  background-size: cover;
+}
+
+button.minus {
+  background: url("./minus.svg");
+  background-size: cover;
+}
+
+button:hover {
+  background-color: rgb(0, 255, 255, .5);
+}
+
