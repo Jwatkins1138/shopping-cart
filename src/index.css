@@ -152,6 +152,15 @@ main {
   align-items: center;
 }
 
+.side-footer {
+  background: white;
+  padding: 1em;
+  border-bottom: 1px solid rgb(0, 0, 0, .3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .side-item {
   padding: 1em;
   border-bottom: 1px solid rgb(0, 255, 255, .3);
@@ -166,6 +175,42 @@ main {
   flex-wrap: wrap;
   justify-content: space-evenly;
   border-top: 1px solid aqua;
+}
+
+.cart {
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid aqua;
+}
+
+.cart-item {
+  padding: 1em;
+  border-bottom: 1px solid rgb(0, 255, 255, .3);
+  background: rgb(255, 255, 255, .8);
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.cart-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.cart-image {
+  max-width: 10em;
+}
+
+.cart-footer {
+  background: white;
+  padding: 1em;
+  border-bottom: 1px solid rgb(0, 0, 0, .3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .mini-cart {
@@ -279,6 +324,7 @@ main {
 
 .item-image {
   max-width: 100%;
+  max-height: 100%;
 }
 
 button {
@@ -298,6 +344,11 @@ button.plus {
 
 button.minus {
   background: url("./minus.svg");
+  background-size: cover;
+}
+
+button.cart {
+  background: url("./cart.svg");
   background-size: cover;
 }
 
