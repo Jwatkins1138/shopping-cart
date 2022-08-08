@@ -10,7 +10,7 @@ const Cart = (props) => {
           <div className="cart-image"><img className="item-image" src={item.img} alt="product" /></div>
         </div>
         <div className="cart-body">
-          <button className="minus"></button>
+          <button onClick={props.cartProps.remove(item)} className="minus"></button>
           <strong>${item.price}</strong>
         </div>   
       </div>

@@ -21,8 +21,18 @@ function App() {
     }
   };
 
+  const removeFromCart = (item) => {
+    return () => {
+      let tempCart = [...cart];
+      let i = tempCart.indexOf(item);
+      tempCart.splice(i, 1);
+      setCart(tempCart);
+    }
+  };
+
   const cartProps = {
     add: addToCart,
+    remove: removeFromCart,
     items: cart
   };
 
