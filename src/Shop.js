@@ -150,7 +150,7 @@ const Shop = (props) => {
   const console = {
     name: "regence style lava console",
     type: "decor",
-    description: "a regency style console table made of lava",
+    description: "a regence style console table made of lava",
     img: "./images/console.jpg",
     price: 1124.99
   };
