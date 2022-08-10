@@ -179,6 +179,14 @@ const Shop = (props) => {
     price: 4000.99
   };
 
+  const waistcoat = {
+    name: "bismuth waistcoat",
+    type: "apparel",
+    description: "snappy little vest",
+    img: "./images/waistcoat.jpg",
+    price: 32.99
+  };
+
   const sampleOne = {
     name: "fun rock",
     type: "rock",
@@ -213,6 +221,7 @@ const Shop = (props) => {
   products.push(crown);
   products.push(trinket);
   products.push(superRock);
+  products.push(waistcoat);
   products.push(helm);
   products.push(chalice);
   products.push(emerald);
